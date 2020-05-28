@@ -28,7 +28,6 @@ from pacifica.dispatcher.uploader_runners import UploaderRunner, RemoteUploaderR
 DB_ = playhouse.db_url.connect(os.getenv('DB_URL', 'postgres://podcast:podcast@podcastdb:5432/podcast'))
 ReceiveTaskModel = create_peewee_model(DB_)
 MODELS_ = (ReceiveTaskModel, )
-DB_.create_tables(MODELS_)
 ROUTER = Router()
 
 
