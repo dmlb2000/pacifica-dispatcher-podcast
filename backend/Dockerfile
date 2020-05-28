@@ -4,5 +4,5 @@ RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
-COPY *.py /usr/src/app/
+COPY . /usr/src/app/
 CMD celery -A src.tasks worker --loglevel=info
